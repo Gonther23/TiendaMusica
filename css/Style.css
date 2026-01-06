@@ -7,6 +7,10 @@ body {
     margin: 0;
 }
 
+/* -------------------------------------------
+   HEADER
+------------------------------------------- */
+
 header {
     display: flex;
     align-items: center;
@@ -15,57 +19,54 @@ header {
     padding: 10px 40px;
     border: 2px solid #6666;
     background-color: rgb(19, 84, 155);
-
 }
 
-header .logo {
+.header__logo {
     display: inline-flex;
     width: 100px;
 }
 
-header nav {
+.header__nav {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-header nav a {
+.header__nav-link {
     margin: 0 10px;
     display: inline-block;
     width: 100px;
     text-align: center;
 }
 
-header h1 {
-    display: inline-flex;
+.header__title {
     text-align: center;
     display: flex;
-
 }
-main h2{
+
+/* -------------------------------------------
+   CONTENIDO
+------------------------------------------- */
+
+.welcome__title {
     text-align: center;
 }
-.galeriaImagenes {
-    width: 100%;
+
+/* Galería */
+.gallery {
+    width: 90%;
+    margin: 30px 5%;
+    text-align: center;
     border-radius: 10px;
     transition: transform 0.3s;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-.galeriaImagenes img:hover {
+.gallery__image:hover {
     transform: scale(1.05);
-
 }
 
-.galeriaImagenes {
-    width: 90%;
-    margin: 30px 5%;
-    text-align: center;
-
-}
-
-.contenedorGaleria {
-
+.gallery__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 15px;
@@ -74,15 +75,15 @@ main h2{
     align-items: center;
 }
 
-.contenedorGaleria img {
+.gallery__image{
     width: 100%;
     border-radius: 10px;
     transition: transform 0.3s;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-.cuadricula {
-
+/* Cuadrícula */
+.products {
     background-color: #fff;
     width: 80%;
     margin: 0 auto;
@@ -92,56 +93,53 @@ main h2{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.cuadricula .instrumentos {
-    border: 1px solid #ddd;
+.products .products__item {
     padding: 10px;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    text-align: center;
     background: #fff;
+    text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-main section {
+.intro {
     text-align: center;
-
 }
 
 section article {
-
     margin: 10px 10px;
     display: inline-block;
     text-align: center;
 }
 
-.VideoPromo {
+/* Videos */
+.media__section {
     margin: 45px 10px;
     background-color: rgb(211, 211, 211);
     text-align: center;
 }
 
-.videoPrincipal {
-
+.media__video {
     display: block;
     margin: 0 auto;
     max-width: 80%;
 }
 
-
-.ConVideo {
+.media {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* para que ocupe toda la pantalla */
 }
 
+/* -------------------------------------------
+   SELECTORES BASICOS
+------------------------------------------- */
 
-/* Selector universal */
 * {
     box-sizing: border-box;
 }
 
-/* Selectores de atributo */
 img[alt] {
     border-radius: 10px;
 }
@@ -151,7 +149,7 @@ a[href] {
     font-weight: bold;
 }
 
-/* Descendiente */
+/* Afecta todos los <p> dentro de <section> — lo dejo igual para no alterar la página */
 section p {
     width: 100%;
     font-size: 30px;
@@ -159,7 +157,9 @@ section p {
     margin: 10px;
 }
 
-
+/* -------------------------------------------
+   PSEUDOCLASES
+------------------------------------------- */
 
 nav a:hover {
     background-color: #0e4176;
@@ -175,7 +175,6 @@ nav a:visited {
     color: purple;
 }
 
-/* Para botones */
 button:hover {
     background-color: #cfd6f0;
     cursor: pointer;
@@ -184,8 +183,6 @@ button:hover {
 /* -------------------------------------------
    PSEUDOELEMENTOS
 ------------------------------------------- */
-
-
 
 p::first-line {
     font-style: italic;
@@ -196,39 +193,32 @@ button::after {
     content: " 🎵";
 }
 
+/* Título principal */
 #tituloPrincipal {
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-
-
 /************************************************************
-
-Ajustes a diferentes resoliciones 
-
+   RESPONSIVE
 ************************************************************/
 
-
-/* Header y navegación responsivos */
 @media (max-width: 1086px) {
 
     header {
-        padding: 0 ;
+        padding: 0 100px;
         flex-direction: column;
         height: auto;
-        padding: 0 100px;
         text-align: center;
-        border: 0px;
+        border: 0;
         gap: 10px;
     }
 
-    header nav {
+    .header__nav {
         flex-direction: column;
- 
     }
 
-    header nav a {
+    .header__nav-link {
         padding: 8px 12px;
     }
 }
@@ -236,26 +226,28 @@ Ajustes a diferentes resoliciones
 @media (max-width: 426px) {
 
     header {
-        padding: 0 ;
+        padding: 20px;
         flex-direction: column;
         height: auto;
-        padding: 20px;
         text-align: center;
         gap: 10px;
     }
 
-    header nav {
+    .header__nav {
         flex-direction: column;
         gap: 5px;
     }
 
-    header nav a {
+    .header__nav-link {
         width: auto;
         padding: 8px 12px;
     }
 }
 
-@media (prefers-color-scheme: dark){
-    body { background:#111; color:#eee; }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body { 
+        background: #111; 
+        color: #eee; 
+    }
 }
-
