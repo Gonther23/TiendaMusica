@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicWorld - Tienda de Instrumentos</title>
+    <link rel="stylesheet" href="/css/Style.css">
+</head>
+
+<body>
+    <!-- Encabezado principal -->
+    <header>
+        <h1 id="principalTitulo" >MusicWorld &mdash; Tu tienda de instrumentos</h1>
+        <img class="logo" src="img/musica.png" alt="logo">
+
+        <nav>
+            <a>Menu</a>
+            <a>Productos</a>
+            <a>Carrito</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- Sección de bienvenida -->
+        <section>
+            <h2>Bienvenido a MusicWorld</h2>
+            <p>Encuentra <s>guitarras</s>, <i>baterías</i>, <br><strong>teclados</strong> <u>y mucho más. <var>¡La
+                        música te espera&nbsp;! &hearts;</var></u></p>
+        </section>
+
+        <!-- Productos destacados -->
+        <section class="cuadricula">
+            <h2>Instrumentos destacados</h2>
+
+            <article class="instrumentos">
+                <img class="imgbody" src="/img/guitarra.jpg" alt="Guitarra eléctrica Fender">
+                <h3><b>Guitarra Eléctrica Fender Stratocaster</b></h3>
+                <p><strong>Precio:</strong> $14,500.00 &nbsp;</p>
+                <button>Agregar al carrito</button>
+
+            </article>
+
+            <article class="instrumentos">
+                <img class="imgbody" src="/img/bateria.jpg" alt="Batería acústica Pearl">
+                <h3><em>Batería Pearl Export Series</em></h3>
+                <p><strong>Precio:</strong> $25,999.00</p>
+                <button>Agregar al carrito</button>
+            </article>
+
+            <article class="instrumentos">
+                <img class="imgbody" src="/img/teclado.jpg" alt="Teclado Yamaha">
+                <h3><em>Teclado Yamaha PSR-E373</em></h3>
+                <p><strong>Precio:</strong> $8,999.00</p>
+                <button>Agregar al carrito</button>
+            </article>
+        </section>
+
+        <!--
+        Inica seccion de multimeda
+         -- Video de youtube usando etiqueta iframe 
+         -- Video en mp4 iniciado con autoplay y con muted
+         -- Audio de una cancion con autoplay y con muted 
+        -->
+        <article class="ConVideo">
+            <section class="VideoPromo">
+                <h2>Video promocional</h2><small>Mira este video para conocer nuestros instrumentos en acción 🎶</small>
+
+                <video class="videoPrincipal" controls muted autoplay loop>
+                    <source src="/assets/Promocional_Instrumentos Musicales.mp4" type="video/mp4">
+                </video>
+
+            </section>
+            <!-- Se colocan los audios en muted, debido a politicas de navegacion-->
+            <section class="VideoPromo">
+                <audio src="/assets/Fila9  Te Vi y Temblé - Drum Cam.mp3" controls autoplay loop ></audio>
+            </section>
+
+        </article>
+        <article class="ConVideo">
+            <section class="VideoPromo">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/F6ge8PeSI_o?si=OuapPaHSAATCgxUF"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>>
+            </section>
+        </article>
+
+    </main>
+</body>
+
+</html>

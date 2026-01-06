@@ -1,0 +1,162 @@
+header {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 10px 40px;
+    border: 2px solid #6666;
+    background-color: #EBB5B0;
+
+}
+
+header .logo {
+    display: inline-flex;
+    width: 100px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    /* o space-between, space-around, etc. */
+    gap: 10px;
+    /* espacio entre enlaces */
+}
+
+header nav a {
+    margin: 0 10px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+header h1 {
+    display: inline-flex;
+    text-align: center;
+    display: flex;
+
+}
+
+body main .imgbody {
+    width: 150px;
+}
+
+.cuadricula {
+    margin: 45px 100px;
+    background-color: #E6EBB0;
+}
+
+section article {
+
+    margin: 45px 100px;
+    display: inline-block;
+    text-align: center;
+}
+
+.VideoPromo {
+    margin: 45px 100px;
+    background-color: rgb(211, 211, 211);
+    text-align: center;
+}
+
+.videoPrincipal {
+
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+
+.ConVideo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    /* para que ocupe toda la pantalla */
+}
+/* Selector universal */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Selectores de atributo */
+img[alt] {
+    border-radius: 8px;
+}
+
+a[href] {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Combinadores */
+
+/* Descendiente */
+section p {
+    line-height: 1.5;
+}
+
+/* Hijo directo */
+nav > a {
+    font-weight: bold;
+}
+
+/* Hermano adyacente */
+h2 + p {
+    color: #4a4a4a;
+}
+
+/* Hermano general */
+h2 ~ p {
+    font-style: italic;
+}
+
+/* Pseudoclases de estructura */
+.instrumentos:first-child {
+    background-color: #fff7dd;
+}
+
+.instrumentos:last-child {
+    background-color: #ddfff3;
+}
+
+.instrumentos:nth-child(2) {
+    background-color: #dde7ff;
+}
+
+/* Pseudoclases de interacción */
+nav a:hover {
+    background-color: #f4c2b0;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+nav a:active {
+    color: red;
+}
+
+nav a:visited {
+    color: purple;
+}
+
+/* Pseudoelementos */
+h2::first-letter {
+    color: #b30000;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+p::first-line {
+    font-style: italic;
+}
+
+button::after {
+    content: " 🎵";
+}
+
+/* Ejemplo usando ID (si deseas agregar uno al HTML) */
+#principalTitulo {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
