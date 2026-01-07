@@ -1,0 +1,253 @@
+body {
+    width: 100%;
+    font-size: clamp(14px, 1.5vw, 18px);
+    font-weight: 300;
+    color: #000000;
+    font-family: "Lexend", Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* -------------------------------------------
+   HEADER
+------------------------------------------- */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 10px 40px;
+    border: 2px solid #6666;
+    background-color: rgb(19, 84, 155);
+}
+
+.header__logo {
+    display: inline-flex;
+    width: 100px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header__nav-link {
+    margin: 0 10px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+.header__title {
+    text-align: center;
+    display: flex;
+}
+
+/* -------------------------------------------
+   CONTENIDO
+------------------------------------------- */
+
+.welcome__title {
+    text-align: center;
+}
+
+/* Galería */
+.gallery {
+    width: 90%;
+    margin: 30px 5%;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gallery__image:hover {
+    transform: scale(1.05);
+}
+
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery__image{
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Cuadrícula */
+.products {
+    background-color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.products .products__item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.intro {
+    text-align: center;
+}
+
+section article {
+    margin: 10px 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Videos */
+.media__section {
+    margin: 45px 10px;
+    background-color: rgb(211, 211, 211);
+    text-align: center;
+}
+
+.media__video {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* -------------------------------------------
+   SELECTORES BASICOS
+------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+img[alt] {
+    border-radius: 10px;
+}
+
+a[href] {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Afecta todos los <p> dentro de <section> — lo dejo igual para no alterar la página */
+section p {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 10px;
+}
+
+/* -------------------------------------------
+   PSEUDOCLASES
+------------------------------------------- */
+
+nav a:hover {
+    background-color: #0e4176;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+nav a:active {
+    color: #e7ecf1;
+}
+
+nav a:visited {
+    color: purple;
+}
+
+button:hover {
+    background-color: #cfd6f0;
+    cursor: pointer;
+}
+
+/* -------------------------------------------
+   PSEUDOELEMENTOS
+------------------------------------------- */
+
+p::first-line {
+    font-style: italic;
+    font-size: 20px;
+}
+
+button::after {
+    content: " 🎵";
+}
+
+/* Título principal */
+#tituloPrincipal {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/************************************************************
+   RESPONSIVE
+************************************************************/
+
+@media (max-width: 1086px) {
+
+    header {
+        padding: 0 100px;
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        border: 0;
+        gap: 10px;
+    }
+
+    .header__nav {
+        flex-direction: column;
+    }
+
+    .header__nav-link {
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 426px) {
+
+    header {
+        padding: 20px;
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .header__nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .header__nav-link {
+        width: auto;
+        padding: 8px 12px;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body { 
+        background: #111; 
+        color: #eee; 
+    }
+}

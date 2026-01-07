@@ -1,0 +1,254 @@
+@charset "UTF-8";
+/* =========================================
+   VARIABLES
+========================================= */
+/* =========================================
+   MIXINS
+========================================= */
+/* =========================================
+   PLACEHOLDERS (extends)
+========================================= */
+.gallery__image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+main .products__button {
+  display: block;
+  border: none;
+  border-radius: 30px;
+  color: #271313;
+  background-color: #eeb8b8;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  font-weight: 600;
+}
+
+/* =========================================
+   BASE
+========================================= */
+body {
+  width: 100%;
+  font-size: clamp(14px, 1.5vw, 18px);
+  font-weight: 300;
+  color: #000;
+  font-family: "Lexend", Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img[alt] {
+  border-radius: 10px;
+}
+
+a[href] {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+section p {
+  width: 100%;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 10px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 10px 40px;
+  border: 2px solid rgba(102, 102, 102, 0.4);
+  background-color: rgb(19, 84, 155);
+}
+header .header__logo {
+  display: inline-flex;
+  width: 100px;
+}
+header .header__nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+header .header__nav-link {
+  margin: 0 10px;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}
+header .header__title {
+  text-align: center;
+  display: flex;
+}
+
+/* =========================================
+   CONTENIDO
+========================================= */
+.welcome__title {
+  text-align: center;
+}
+
+/* Galería */
+.gallery {
+  width: 90%;
+  margin: 30px 5%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.gallery:hover {
+  transform: scale(1.05);
+}
+.gallery__image {
+  transition: transform 0.3s;
+}
+.gallery__image:hover {
+  transform: scale(1.05);
+}
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Productos */
+.products {
+  background-color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.products .products__item {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.intro {
+  text-align: center;
+}
+
+section article {
+  margin: 10px 10px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Videos */
+.media__section {
+  margin: 45px 10px;
+  background-color: rgb(211, 211, 211);
+  text-align: center;
+}
+.media__section .media__video {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* =========================================
+   PSEUDOCLASES
+========================================= */
+nav a:hover {
+  background-color: #0e4176;
+  border-radius: 8px;
+  padding: 4px;
+}
+nav a:active {
+  color: #e7ecf1;
+}
+nav a:visited {
+  color: purple;
+}
+
+button:hover {
+  background-color: #cfd6f0;
+  cursor: pointer;
+}
+button::after {
+  content: " 🎵";
+}
+
+/* =========================================
+   PSEUDOELEMENTOS
+========================================= */
+p::first-line {
+  font-style: italic;
+  font-size: 20px;
+}
+
+#tituloPrincipal {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 1086px) {
+  header {
+    padding: 0 100px;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    border: 0;
+    gap: 10px;
+  }
+  header .header__nav {
+    flex-direction: column;
+  }
+  header .header__nav-link {
+    padding: 8px 12px;
+  }
+}
+@media (max-width: 426px) {
+  header {
+    padding: 20px;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    gap: 10px;
+  }
+  header .header__nav {
+    flex-direction: column;
+    gap: 5px;
+  }
+  header .header__nav-link {
+    width: auto;
+    padding: 8px 12px;
+  }
+}
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #111;
+    color: #eee;
+  }
+}/*# sourceMappingURL=styles.css.map */
