@@ -5,24 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MusicWorld - Tienda de Instrumentos</title>
-    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="CSS/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Stack+Sans+Headline:wght@200..700&display=swap"
         rel="stylesheet">
+    <script src="/js/funcions.js" defer></script>
 </head>
 
+
 <body>
+    <section class="side-menu" id="sideMenu">
+        <span class="close-menu" id="closeMenu">✕</span>
+        <h2>MENÚ</h2>
+        <ul>
+            <li>Inicio</li>
+            <li>Productos</li>
+            <li>Ofertas</li>
+            <li>Contacto</li>
+        </ul>
+    </section>
     <!-- Encabezado principal -->
     <header>
         <h1 class=".header__title">MusicWorld STORE &mdash; Tu tienda de instrumentos</h1>
         <img class="header__logo" src="img/musica.png" alt="logo">
 
         <nav class="header__nav">
-            <a class="header__nav-link">Menu</a>
+            <button class="header__nav-link" id="menuBtn" type="button">Menu</button>
             <a class="header__nav-link">Productos</a>
-            <a class="header__nav-link">Carrito</a>
+            <button class="header__nav-link" id="openCart" type="button">
+                Carrito <span id="cartCount">0</span>
+            </button>
         </nav>
 
     </header>
@@ -34,7 +48,13 @@
             <p class="welcome__text">Encuentra guitarras, baterías, tecladosy mucho más. <var>¡La
                     música te espera&nbsp;! &hearts;</var></p>
         </section>
-
+        <section class="gallery">
+            <div class="gallery__grid">
+                <img class="gallery__image" src="img/galeria.jpg" alt="Galería 1">
+                <img class="gallery__image" src="img/galeria2.jpg" alt="Galería 2">
+                <img class="gallery__image" src="img/galeria4.jpg" alt="Galería 4">
+            </div>
+        </section>
         <section class="intro">
             <h2 class="intro__title">Bienvenidos</h2>
             <p class="intro__subtitle">Conoce nuestros nuevos Productos</p>
@@ -43,7 +63,7 @@
 
 
         <!-- Productos destacados -->
-        
+
 
         <section class="products">
 
@@ -51,58 +71,62 @@
                 <img class="products__image" src="img/guitarra.jpg" alt="Guitarra eléctrica Fender">
                 <h3 class="products__name"><b>Guitarra Eléctrica Fender Stratocaster</b></h3>
                 <p class="products__price"><strong>Precio:</strong> $14,500.00 &nbsp;</p>
-                <button class="products__button">Agregar al carrito</button>
+                <button class="products__button add-cart">Agregar al carrito</button>
 
             </article>
             <article class="products__item">
                 <img class="products__image" src="img/guitarra.jpg" alt="Guitarra eléctrica Fender">
                 <h3 class="products__name"><b>Guitarra Eléctrica Fender Stratocaster</b></h3>
                 <p class="products__price"><strong>Precio:</strong> $14,500.00 &nbsp;</p>
-                <button class="products__button">Agregar al carrito</button>
-
+                <button class="products__button add-cart">Agregar al carrito</button>
             </article>
-                       <article class="products__item">
+            <article class="products__item">
                 <img class="products__image" src="img/guitarra.jpg" alt="Guitarra eléctrica Fender">
                 <h3 class="products__name"><b>Guitarra Eléctrica Fender Stratocaster</b></h3>
                 <p class="products__price"><strong>Precio:</strong> $14,500.00 &nbsp;</p>
-                <button class="products__button">Agregar al carrito</button>
+                <button class="products__button add-cart">Agregar al carrito</button>
 
             </article>
             <article class="products__item">
                 <img class="products__image" src="img/guitarra.jpg" alt="Guitarra eléctrica Fender">
                 <h3 class="products__name"><b>Guitarra Eléctrica Fender Stratocaster</b></h3>
                 <p class="products__price"><strong>Precio:</strong> $14,500.00 &nbsp;</p>
-                <button class="products__button">Agregar al carrito</button>
-
-            </article>
-                        <article class="products__item">
-                <img class="products__image" src="img/guitarra.jpg" alt="Guitarra eléctrica Fender">
-                <h3 class="products__name"><b>Guitarra Eléctrica Fender Stratocaster</b></h3>
-                <p class="products__price"><strong>Precio:</strong> $14,500.00 &nbsp;</p>
-                <button class="products__button">Agregar al carrito</button>
+                <button class="products__button add-cart">Agregar al carrito</button>
 
             </article>
             <article class="products__item">
                 <img class="products__image" src="img/guitarra.jpg" alt="Guitarra eléctrica Fender">
                 <h3 class="products__name"><b>Guitarra Eléctrica Fender Stratocaster</b></h3>
                 <p class="products__price"><strong>Precio:</strong> $14,500.00 &nbsp;</p>
-                <button class="products__button">Agregar al carrito</button>
+                <button class="products__button add-cart">Agregar al carrito</button>
 
-            </article>
-                        <article class="products__item">
-                <img class="products__image" src="img/guitarra.jpg" alt="Guitarra eléctrica Fender">
-                <h3 class="products__name"><b>Guitarra Eléctrica Fender Stratocaster</b></h3>
-                <p class="products__price"><strong>Precio:</strong> $14,500.00 &nbsp;</p>
-                <button class="products__button">Agregar al carrito</button>
 
             </article>
             <article class="products__item">
                 <img class="products__image" src="img/guitarra.jpg" alt="Guitarra eléctrica Fender">
                 <h3 class="products__name"><b>Guitarra Eléctrica Fender Stratocaster</b></h3>
                 <p class="products__price"><strong>Precio:</strong> $14,500.00 &nbsp;</p>
-                <button class="products__button">Agregar al carrito</button>
+                <button class="products__button add-cart">Agregar al carrito</button>
+
 
             </article>
+            <article class="products__item">
+                <img class="products__image" src="img/guitarra.jpg" alt="Guitarra eléctrica Fender">
+                <h3 class="products__name"><b>Guitarra Eléctrica Fender Stratocaster</b></h3>
+                <p class="products__price"><strong>Precio:</strong> $14,500.00 &nbsp;</p>
+                <button class="products__button add-cart">Agregar al carrito</button>
+
+
+            </article>
+            <article class="products__item">
+                <img class="products__image" src="img/guitarra.jpg" alt="Guitarra eléctrica Fender">
+                <h3 class="products__name"><b>Guitarra Eléctrica Fender Stratocaster</b></h3>
+                <p class="products__price"><strong>Precio:</strong> $14,500.00 &nbsp;</p>
+                <button class="products__button add-cart">Agregar al carrito</button>
+
+
+            </article>
+
         </section>
 
 
@@ -136,6 +160,12 @@
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </section>
         </article>
+
+        <section class="cart" id="cart">
+            <span class="close-cart" id="closeCart">✕</span>
+            <h2>CARRITO</h2>
+
+        </section>
 
     </main>
 
